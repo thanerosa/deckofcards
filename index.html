@@ -16,7 +16,9 @@
         <div class="icon"></div>
         <div class="icon"></div>
     </header>
+    <!-- the app div is used to host the vue container -->
     <div id="app">
+        <!-- vue handler for transitions -->
         <transition name="fade">
             <div class="toast" v-if="message !== ''">
                 <h1 class="grad">{{message}}</h1>
