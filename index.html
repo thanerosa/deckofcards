@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Snap!</h2>
+        <div class="icon"></div>
+        <div class="icon"></div>
+        <div class="icon"></div>
+    </header>
+    <div id="app">
+        <transition name="fade">
+            <div class="toast" v-if="message !== ''">
+                <h1 class="grad">{{message}}</h1>
+            </div>
+        </transition>
+        <div id="cards">
+            <img class="card" id="lCard">
+            <img class="card" id="cCard">
+        </div>
+        <button class="grad" v-if="cardNumber !== 52" @click="drawCard">Draw Card</button>
+        <div class="end-val" v-else>
+            <h3>Suit Matches: {{suitMatch}}</h3>
+            <h3>Value Matches: {{valueMatch}}</h3>
+        </div>
+
+        <h2>Card Number {{cardNumber}} of 52</h2>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

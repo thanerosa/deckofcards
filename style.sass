@@ -1,0 +1,79 @@
+
+body
+    margin: 0px
+    font-family: Arial, Helvetica, sans-serif
+
+header
+    background-color: lightgray
+    padding: 5px 15px
+    display: flex
+    align-items: baseline
+
+header h2
+    margin: 5px
+    flex-grow: 1
+
+.icon
+    height: 25px
+    width: 25px
+    background-color: white
+    margin: auto 5px
+    border-radius: 50px
+
+h1, h2, h3
+    margin: auto
+
+#app
+    width: calc(100%-30px)
+    height: 80vh
+    padding: 15px
+    margin: 15px
+    display: flex
+    flex-direction: column
+    .end-val
+        display: flex
+        flex-direction: column
+    #cards
+        display: flex
+        justify-content: space-around
+        margin: auto 10px
+        height: auto
+        .card
+            height: 45vh
+            width: 30vh
+            border: 1px solid black
+            background-repeat: no-repeat
+            background-size: contain
+    button
+        margin: 10px 40%
+        padding: 15px 0px
+        border-radius: 15px
+        filter: grayscale(100%)
+        transition: 0.3s
+        &:hover
+            filter: grayscale(0%)
+            cursor: pointer
+
+.toast
+    width: calc(100% - 60px)
+    position: absolute
+    display: flex
+    h1
+        margin: auto
+        
+
+.grad
+    color: white
+    padding: 15px
+    border: 1px solid white
+    border-radius: 5px
+    background: rgba(182, 69, 69, 1.0)
+    background: linear-gradient(to bottom right, rgba(182, 69, 69, 1.0), rgba(205, 1, 1, 1.0))
+
+// ANIMS
+
+.fade-enter-from, .fade-leave-to
+    opacity: 0
+    
+.fade-enter-active, .fade-leave-active
+    transition: all 0.2s ease
